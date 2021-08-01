@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:wght@100;200;300;400;500;600&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: linear-gradient(62.95deg, #6663e8 0.64%, #af68ea 100%);
+  font-family: "Saira", sans-serif;
 }
 
 a {
@@ -13,4 +17,8 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+body, #__next, #__next > div {
+  height: 100vh;
 }
