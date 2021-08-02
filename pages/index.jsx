@@ -3,7 +3,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
-function Faq({ index, id, title, description }) {
+function Faq({ title, description }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -58,11 +58,7 @@ export default function Home() {
               id: "5",
               title: "How many team members can I invite?",
               description: "No more that 2GB. All files in your account must  fit your allotted storage space."
-            }].map((faq, index) => (
-              <Faq key={index} index={index} id={faq.id} title={faq.title}
-                description={faq.description}
-              />
-            ))}
+            }].map((faq, index) => <Faq key={index} title={faq.title} description={faq.description} />)}
           </div>
         </div>
       </main>
