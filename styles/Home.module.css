@@ -1,159 +1,56 @@
 .main {
   height: 100%;
-  padding: 5rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  background: linear-gradient(62.95deg, #6663e8 0.64%, #af68ea 100%);
+  background: #998235;
 }
-.container {
-  padding: 5rem;
-  background-color: white;
-  border-radius: 24px;
-  height: 70vh;
+.leaves-container {
   display: flex;
-  gap: 1rem;
-  align-items: center;
+  gap: 2.5rem;
+  margin-bottom: 20px;
 }
-.svg__container {
+.leaves-component {
   position: relative;
+  width: 180px;
+  height: 180px;
 }
-@keyframes moveTopDown {
-  0% {
-    top: 30%;
-  }
-  50% {
-    top: 35%;
-  }
-  100% {
-    top: 30%;
-  }
+.leaves-component:last-child {
+  margin-top: 20px;
 }
-.box_desktopSvg__container {
+.leaves-component span:nth-child(1) {
   position: absolute;
-  right: 94%;
-  width: 45%;
-  width: 50%;
-  animation: moveTopDown 7s infinite;
+  border-radius: 0px 50px;
+  background-color: #1a4341;
+  width: 80px;
+  height: 100px;
 }
-.desktop__container {
-  margin-inline-start: -7rem;
-  width: 95%;
+.leaves-component span:nth-child(2) {
+  position: absolute;
+  right: 0;
+  border-radius: 50px 0px;
+  background-color: #f3ac3c;
+  width: 80px;
+  height: 60px;
 }
-.desktop__container img {
-  clip: rect(0px, 460px, 600px, 32px);
+.leaves-component span:nth-child(3) {
+  position: absolute;
+  bottom: 0;
+  border-radius: 50px 0px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  background-color: #f3ac3c;
+  width: 80px;
+  height: 60px;
 }
-.FAQ__container {
-  width: 40%;
-  flex: 1;
-}
-.faq {
-  border-bottom: 2px solid #e9e9e9;
-  max-height: 30px;
-  transition: max-height 0.2s;
-  overflow: hidden;
-  margin-bottom: 1.5rem;
-}
-.faq__open-row {
-  max-height: 500px;
-  transition: max-height 0.5s;
-}
-.faq > div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.faq img {
-  cursor: pointer;
-  transform: rotateZ(-360deg);
-  transition: transform 0.2s;
-}
-.faq__open-row img {
-  transform: rotateZ(-180deg);
-  transition: transform 0.2s;
-}
-.faq h5 {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
-  color: #55545c;
-  transition: color 0.2s;
-  margin: 0;
-}
-.faq h5:hover {
-  cursor: pointer;
-  color: #5b36a0;
-  transition: all 0.2s;
-}
-.faq__open-row h5 {
-  font-weight: 900;
-  transition: all 0.2s;
-}
-.faq p {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 19px;
-  color: #55545c;
-  margin-bottom: 0;
-}
-
-@media screen and (max-width: 769px) {
-  .container {
-    margin: 1rem;
-  }
-  .svg__container {
-    width: 40%;
-  }
-}
-@media screen and (max-width: 426px) {
-  .container {
-    flex-direction: column;
-    height: 80vh;
-    margin-top: 4rem;
-  }
-  .FAQ__container {
-    margin-top: 2rem;
-    width: 100%;
-  }
-  .FAQ__container h1 {
-    text-align: center;
-  }
-  .desktop__container {
-    position: absolute;
-    bottom: -57px;
-    left: 50px;
-    width: 223px;
-  }
-  .box_desktopSvg__container {
-    right: 80%;
-    width: 70%;
-  }
-  .svg__container {
-    margin-inline-end: -2rem;
-  }
-  .container {
-    padding: 1rem;
-    height: 100vh;
-  }
-  .desktop__container img {
-    clip: unset;
-  }
-  @keyframes box_desktopSvg {
-    0% {
-      top: -55px;
-    }
-    50% {
-      top: -60px;
-    }
-    100% {
-      top: -55px;
-    }
-  }
-  .box_desktopSvg__container {
-    right: 83%;
-    animation: box_desktopSvg 7s infinite;
-  }
+.leaves-component span:nth-child(4) {
+  position: absolute;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  bottom: 0;
+  right: 0;
+  border-radius: 0px 50px;
+  background-color: #1a4341;
+  width: 80px;
+  height: 100px;
 }
