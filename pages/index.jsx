@@ -22,7 +22,7 @@ export default function Home() {
     <>
       <Head>
         <title>AlaaHijazi | FAQ</title>
-        <meta name="description" content=FAQ" />
+        <meta name="description" content="FAQ" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
