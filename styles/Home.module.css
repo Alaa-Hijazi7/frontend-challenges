@@ -3,54 +3,162 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  background: #998235;
+  border: 6px solid #fc3170;
+  border-radius: 86px;
+  background-color: transparent;
 }
-.leaves-container {
+.card {
+  width: 380px;
+  height: 538px;
+  background-color: #181a1c;
+  border-radius: 24px;
+  padding: 1rem;
+  color: #fff;
   display: flex;
-  gap: 2.5rem;
-  margin-bottom: 20px;
+  flex-direction: column;
 }
-.leaves-component {
+.card-thumbnail {
   position: relative;
-  width: 180px;
-  height: 180px;
+  align-self: center;
+  width: 340px;
+  height: 248px;
 }
-.leaves-component:last-child {
+.card-thumbnail span {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(254, 45, 86, 0) 0%,
+    rgba(232, 58, 116, 0.41) 100%
+  );
+  border-radius: 12px;
+}
+.card-thumbnail img {
+  width: 340px;
+  height: 248px;
+  border-radius: 12px;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 20px;
 }
-.leaves-component span:nth-child(1) {
-  position: absolute;
-  border-radius: 0px 50px;
-  background-color: #1a4341;
-  width: 80px;
-  height: 100px;
+.user-info > div {
+  display: flex;
+  align-items: center;
+  gap: 11px;
 }
-.leaves-component span:nth-child(2) {
-  position: absolute;
-  right: 0;
-  border-radius: 50px 0px;
-  background-color: #f3ac3c;
-  width: 80px;
-  height: 60px;
+.user-info > div img {
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  flex: 1;
 }
-.leaves-component span:nth-child(3) {
-  position: absolute;
-  bottom: 0;
-  border-radius: 50px 0px;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
-  background-color: #f3ac3c;
-  width: 80px;
-  height: 60px;
+.user-info > div span {
+  margin: 0;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.01em;
 }
-.leaves-component span:nth-child(4) {
-  position: absolute;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
-  bottom: 0;
-  right: 0;
-  border-radius: 0px 50px;
-  background-color: #1a4341;
-  width: 80px;
-  height: 100px;
+.card-follow {
+  user-select: none;
+  cursor: pointer;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.05em;
+  color: #f3f3f3;
+  background: linear-gradient(96.95deg, #ff293c 0%, #fb3175 100%);
+  border-radius: 26px;
+  width: 63px;
+  height: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-title {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  letter-spacing: 0.015em;
+  width: 260px;
+  margin-top: 15px;
+}
+.card-description {
+  margin-top: 12px;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 13px;
+  letter-spacing: 0.015em;
+  color: #79797b;
+}
+.card-icons {
+  display: flex;
+  gap: 11px;
+  margin-top: 15px;
+}
+.card-icons > div {
+  cursor: pointer;
+  background-color: #3a3c3d;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-button {
+  border: 0;
+  margin-top: 18px;
+  cursor: pointer;
+  width: 340px;
+  height: 53px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  background: linear-gradient(91.4deg, #ff293c 0%, #fb3175 100%);
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+.card input {
+  width: 340px;
+  height: 53px;
+  border: 0;
+  border-radius: 12px;
+  padding: 0 1rem;
+  background-color: #3a3c3d;
+  color: #fff;
+  font-size: 15px;
+  line-height: 18px;
+  flex: 1;
+}
+.card input::placeholder {
+  color: rgba(255, 255, 255, 0.381);
+}
+.send-message {
+  margin-top: 18px;
+  gap: 0.2rem;
+  display: flex;
+  align-items: center;
+}
+.send-message__icon {
+  cursor: pointer;
+  width: 53px;
+  height: 53px;
+  background-color: #3a3c3d;
+  display: flex;
+  justify-content: center;
+  border-radius: 12px;
+  align-items: center;
+}
+.send-message__button {
+  border: 0;
+  background-color: transparent;
 }
