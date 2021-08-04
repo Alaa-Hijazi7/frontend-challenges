@@ -26,6 +26,7 @@ body,
 #__next,
 #__next > div {
   height: 100vh;
+  overflow: hidden;
 }
 img {
   user-select: none;
