@@ -5,64 +5,117 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #222730;
+  background-color: #f3ac3c;
 }
-.row {
+.container {
+  background-color: #fff;
+  box-shadow: 0px 15px 38px rgba(0, 0, 0, 0.13);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 290px;
+  border-radius: 34px;
+  max-width: 419px;
   width: 100%;
-  height: 300px;
+  margin: 1rem;
+  padding: 0 1.2rem;
+}
+.container > div {
+  border: 2px solid #f9fafa;
+  width: 100%;
+  height: 200px;
+  max-width: 375px;
+  border-radius: 15px;
+  padding: 12px;
   position: relative;
-  display: flex;
-  justify-content: center;
-  background-color: #4caab3;
 }
-.row > span {
+.textarea {
+  overflow: auto;
+  max-height: 145px;
+  margin-top: 10px;
+}
+.textarea::-webkit-scrollbar {
+  width: 7px;
+  border-radius: 6px;
+}
+.textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.textarea::-webkit-scrollbar-thumb {
+  background: #888;
+}
+.textarea::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.length {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 12px;
+  color: #ced5de;
+  display: block;
+  text-align: end;
+}
+.container > div p {
   position: absolute;
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.2;
+  margin-top: 10px;
+}
+.container button {
+  border: 0;
+  cursor: pointer;
+  background-color: #2984ff;
+  width: 92px;
+  height: 36px;
+  border-radius: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
-  top: -30%;
-  width: 450px;
-  height: 450px;
-  transform: rotate(45deg);
-  background-color: #222730;
+  align-self: flex-end;
+  gap: 11px;
+  transition: all 0.2s;
+  margin-top: 11px;
+  color: #fff;
 }
-@keyframes animationRow {
-  0% {
-    width: 5000px;
-    height: 5000px;
-  }
-  50% {
-    width: 5000px;
-    height: 5000px;
-  }
-  100% {
-    width: 100px;
-    height: 100px;
-  }
+.container button:hover {
+  transition: opacity 0.2s;
+  opacity: 0.8;
 }
-@keyframes animationTwo {
-  0% {
-    transform: rotate(45deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.container button:active,
+.container button:focus {
+  box-shadow: 0 0 0px 3px #caddf6;
+  transition: box-shadow 0.2s;
 }
-.row > span > span {
+.color-picker {
   position: absolute;
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 300px;
-  height: 300px;
-  background: #4caab3;
-  animation: animationTwo 2s forwards;
+  bottom: 10px;
+  gap: 7px;
 }
-.row > span > span > span {
-  position: absolute;
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  background: #222730;
-  animation: animationRow 1.5s forwards;
+.color-picker span {
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 15px;
+  color: #ced5de;
+  margin-inline-end: 0.5rem;
+}
+.color-picker button {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  background-color: transparent;
+}
+.color-picker__icon {
+  display: flex;
+}
+.color-picker__icon img {
+  cursor: pointer;
+  margin-bottom: -0.5rem;
+}
+.color-picker__icon input {
+  visibility: hidden;
 }
